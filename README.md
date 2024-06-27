@@ -21,7 +21,8 @@ System Context is not possible by using "winget" as the .exe location must be fo
 ## Requirements
 Windows 10 20H2 or newer<br>
 Powershell 5.1<br>
-Automatically installs/updates required modules "IntuneWin32App" and "Microsoft.Graph.Intune" <br>
+Client language must be en-US, as Winget-Wrapper parses only English output. <br>
+Module "IntuneWin32App" and "Microsoft.Graph.Intune" needed for import to InTune <br>
 
 ## WinGet-WrapperImportGUI.exe
 WinGet-WrapperImportGUI is a graphical interface designed to streamline the import of WinGet packages into InTune. <br>
@@ -123,3 +124,7 @@ Setup Requirement rule script with return string value of "Installed"<br><br>
 ![image](https://github.com/SorenLundt/WinGet-Wrapper/assets/127216441/b2bdb617-c74a-4902-9c2c-b8defe1adc70)
 
 ![image](https://github.com/SorenLundt/WinGet-Wrapper/assets/127216441/b8cd24fd-da34-4e1c-aeb2-0627717e1244)
+
+
+## Disclaimer
+This software is provided "AS IS" with no warranties. Use at your own risk.
