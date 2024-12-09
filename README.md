@@ -29,24 +29,20 @@ WinGet-WrapperImportGUI is a graphical interface designed to streamline the impo
 This tool complements WinGet-Wrapper, providing an intuitive way to upload WinGet packages to InTune, along with their metadata. <br>
 
 #### Features:
-- **Search and Select:** Seamlessly search for WinGet packages and select the ones you need.
+- **Search and Select:** Seamlessly search for WinGet packages, get detailed info and package versions.
 - **InTune Integration:** Import selected WinGet packages directly into InTune for deployment.
 - **CSV Support:** Export and import packages using CSV files, facilitating batch operations.<br>
 
-![image](https://github.com/SorenLundt/WinGet-Wrapper/assets/127216441/1b43c387-3adf-4eb7-90c3-99dcf07b9871)
-
+![image](Images/WinGet-WrapperImportGUI.png)
 
 
 #### Usage:
 >**Open the GUI:** Run WinGet-WrapperImportGUI.exe to open the GUI<br>
 >**Search Packages:** Enter your search query and click "Search" to find WinGet packages.<br>
 >**Select Packages:** Select from search results, then click the center arrow to move them to the import list.<br>
+>**Adjust:** Select target version if required, UpdateOnly, Installation context, etc.<br>
 >**Import to InTune:** Enter your Tenant ID and click "Import to InTune" to import selected packages.<br>
 >**Additional Actions:** Use buttons for exporting CSV, deleting, or importing from CSV.<br>
-
-If you get errors when using the ImportGUI, you may need to unblock winget-wrapper files from file properties.<br>
-WinGet-WrapperImportFromCSV.ps1, IntuneWinAppUtil.exe, WinGet-WrapperImportGUI.ps1, more..
-![image](https://github.com/SorenLundt/WinGet-Wrapper/assets/127216441/9dc24e0b-966b-4aee-bfbc-e28235d1bcfb)
 
 
 ## WinGet-Wrapper.ps1
@@ -125,6 +121,18 @@ Setup Requirement rule script with return string value of "Installed"<br><br>
 
 ![image](https://github.com/SorenLundt/WinGet-Wrapper/assets/127216441/b8cd24fd-da34-4e1c-aeb2-0627717e1244)
 
+## Is Winget Safe to Use in Enterprise?  <br>
+Winget (Windows Package Manager) is generally safe for enterprise use due to the following security features:  <br>
+  <br>
+* Package Verification: Utilizes hash checks to ensure package integrity.  <br>
+* Microsoft Vetting: Packages undergo thorough testing and scanning before approval.  <br>
+* Manual Approvals: Human oversight adds an extra layer of security.  <br>
+* User Controls: Enterprises can restrict installations through whitelisting.  <br>
+* Regular Updates: Active maintenance and community involvement enhance security.  <br>
+<br>
+Overall, Winget is a secure option for enterprises, especially when proper management practices are implemented. Continuous monitoring is key to maintaining security.  <br>
 
 ## Disclaimer
-This software is provided "AS IS" with no warranties. Use at your own risk.
+While Winget provides various security measures, no software management tool is entirely risk-free. Organizations should continually assess their security posture and policies when using Winget or any other software deployment tool. <br>
+<br>
+**This software is provided "AS IS" with no warranties. Use at your own risk.** <br>
