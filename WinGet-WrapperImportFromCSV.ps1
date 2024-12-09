@@ -818,11 +818,11 @@ Write-Log "Checking if application already exists in Intune - $PackageName"
             }
             catch {
                 # Check if permission is missing and fix it
-                if ($($_.Exception.Message) -match "DeviceManagementApps.ReadWrite.All"){
-                    Connect-MgGraph -ClientID $ClientID -Scope 'DeviceManagementApps.ReadWrite.All' -TenantID $TenantID -ErrorAction Stop
+                if ($($_.Exception.Message) -match "DeviceManagementApps.ReadWrite.All") {
+                    Connect-MgGraph -ClientId $ClientID -Scope 'DeviceManagementApps.ReadWrite.All' -TenantId $TenantID -ErrorAction Stop
                     Start-Sleep -Seconds 10
                     # Try again to upload after permission grant
-                    try{
+                    try {
                         Write-Log "Importing application '$PackageName' to InTune"
                         $AppImport = Add-IntuneWin32App @AddInTuneWin32AppArguments -WarningAction Stop
                         $AppID = $AppImport.ID
@@ -830,7 +830,7 @@ Write-Log "Checking if application already exists in Intune - $PackageName"
                         Write-Log "Imported application '$PackageName' to InTune" -ForeGroundColor 'Green'
                         $imported = $True
                     }
-                    catch{
+                    catch {
                         Write-Log "An error occurred: $($_.Exception.Message)" -ForeGroundColor 'Red'
                         $imported = $False
                         $row | Add-Member -MemberType NoteProperty -Name 'Imported' -Value $imported  #Write imported status to $row
@@ -839,7 +839,7 @@ Write-Log "Checking if application already exists in Intune - $PackageName"
                         continue
                     }
                 }
-                else{
+                else {
                     Write-Log "An error occurred: $($_.Exception.Message)" -ForeGroundColor 'Red'
                     $imported = $False
                     $row | Add-Member -MemberType NoteProperty -Name 'Imported' -Value $imported  #Write imported status to $row
