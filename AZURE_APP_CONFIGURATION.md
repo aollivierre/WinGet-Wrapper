@@ -96,3 +96,8 @@ The user account running the scripts needs one of these roles:
 - [Microsoft Graph Permissions Reference](https://docs.microsoft.com/en-us/graph/permissions-reference)
 - [Azure AD Application Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 - [Microsoft Graph PowerShell Authentication](https://docs.microsoft.com/en-us/powershell/microsoftgraph/authentication-commands) 
+
+
+
+see https://github.com/SorenLundt/WinGet-Wrapper/issues/21
+see https://github.com/SorenLundt/WinGet-Wrapper/pull/23
